@@ -7,6 +7,7 @@ import { BookPage } from "./pages/BookPage";
 import { HomePage } from "./pages/HomePage";
 
 // Comment
+
 function App() {
   return (
     <Router>
