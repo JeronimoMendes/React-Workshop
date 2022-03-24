@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 
+// Comment
+
 function App() {
   return (
     <Router>
