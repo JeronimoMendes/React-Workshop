@@ -23,8 +23,7 @@ export const BookPage = (props) => {
 			
 			<div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '50vh'}}>
 				<Box textAlign='center' sx={{bgcolor: '#efefef'}}>
-					{<BooksInsideInfo info={data[id]} id={id}/>}
-					<Text>{id}</Text>
+					{<BooksInsideInfo info={data[id]}/>}
 				</Box>
 			</div>
 			
