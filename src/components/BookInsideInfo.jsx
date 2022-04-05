@@ -1,21 +1,20 @@
+import { ListItem, ListItemText } from '@mui/material'
 import React from 'react'
 
 export const BooksInsideInfo = (props) => {
   return (
 	<div>
 	<>
-		<li>Autor: {props.info.author}</li> <br/>
-		<li>Ano: {props.info.year}</li> <br/>
-		<li>País: {props.info.country}</li> <br/>
-		<li>Língua: {props.info.language}</li> <br/>
-		<li>Foto de capa: <img src={props.info.imageLink} alt="" /></li> <br/>
-		<li>
-			<a href={props.info.link}>Link para a página de Wikipédia</a>
-		</li><br/>
-		<li>Nº de páginas: {props.info.pages}</li> <br/>
-		<br/>
+		<ListItem><ListItemText>Author: {props.info.author}</ListItemText></ListItem> 
+		<ListItem><ListItemText>Year: {props.info.year}</ListItemText></ListItem> 
+		<ListItem><ListItemText>Country: {props.info.country}</ListItemText></ListItem> 
+		<ListItem><ListItemText>Language: {props.info.language}</ListItemText></ListItem> 
+		<ListItem><ListItemText>Book cover: <img src={props.info.imageLink} alt="" /></ListItemText></ListItem>
+		<ListItem><ListItemText>
+			<a href={props.info.link}>Link to the Wikipedia page</a>
+		</ListItemText></ListItem>
+		<ListItem><ListItemText>Number of pages: {props.info.pages}</ListItemText></ListItem> 
 	</>
 	</div>
-	
   )
 }

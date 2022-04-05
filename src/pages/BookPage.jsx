@@ -16,20 +16,17 @@ export const BookPage = (props) => {
 
 	return (
 		<div>
-			<Typography variant="h3" style={{textAlign: "center"}}>Página do livro: {data[id].title}</Typography>
-			<ul>
+			<Typography variant="h4" style={{textAlign: "center"}}>Aditional information about: {data[id].title}</Typography>
+			<Grid container>
 				{<BooksInsideInfo info={data[id]}/>}
-			</ul>
-
+				<Grid item xs={9}>
+					<Typography variant="h6" style={{textAlign: "center"}}>Likes: {number}</Typography>
+				</Grid>
+			</Grid>
+			<br/>
 			<Grid container direction="row">
-				<Grid item xs={6}>
-					<span>Número de Likes: {number}</span>
-				</Grid>
-				<Grid item xs={6}>
-					<Button onClick={handleClick} variant="contained">Like</Button>
-				</Grid>
-				<Grid item xs={6}>
-					<Button variant="contained">Apagar</Button>
+				<Grid item>
+					<Button color="secondary" onClick={handleClick} variant="contained">Like</Button>
 				</Grid>
 			</Grid>
 		</div>
