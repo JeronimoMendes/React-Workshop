@@ -17,7 +17,7 @@ export const BookPage = (props) => {
 	return (
 		<div>
 			<Box sx={{bgcolor: '#efefef'}}>
-				<Typography variant="h4" style={{textAlign: "center"}}>Aditional information about: {data[id].title}</Typography>
+				<Typography variant="h4" style={{textAlign: "center"}}>Aditional information about the book: {data[id].title}</Typography>
 				<br/><Divider/>
 			</Box>
 			

@@ -11,8 +11,8 @@ export const HomePage = () => {
 				
 				<Typography variant='h5' style={{textAlign: "center"}}>These are all the books that are available for purchase at the moment</Typography>
 				
-				<Typography variant='h6' style={{textAlign: "center"}}>For more 
-				information about a certain book, type in the searchbar "/book/:id" where :id is the ID of the book</Typography><br/>
+				<Typography variant='h6' style={{textAlign: "center"}}>Click the link in the book's title for more 
+				information about that book. </Typography><br/>
 				
 				<Typography variant='h6' style={{textAlign: "center"}}>React Workshop - Afonso Domingues</Typography><br/>
 				<br/><Divider/>
