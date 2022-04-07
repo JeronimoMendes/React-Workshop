@@ -1,40 +1,35 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Book } from '../components/Book'
 import data from "../books.json"
-import { Button, Grid } from '@mui/material'
-
+import { Divider, Typography, Grid, Box } from '@mui/material'
 
 export const HomePage = () => {
-	const [number, setNumber] = useState(0);
-
-	const handleClick = () => {
-		setNumber(number + 1);
-	}
-		
 	return (
-	<div>
-		
-		<h1>Welcome to book store</h1>
-		<h3>Here you can buy second hand books!</h3>
-		<Grid container direction="row">
-			<Grid item xs={6}>
-				<span>{number}</span>
+		<div>
+			<Box sx={{bgcolor: '#efefef'}}>
+				<Typography variant='h3' style={{textAlign: "center"}}>Welcome to the bookshop!</Typography><br/>
+				
+				<Typography variant='h5' style={{textAlign: "center"}}>These are all the books that are available for purchase at the moment</Typography>
+				
+				<Typography variant='h6' style={{textAlign: "center"}}>Click the link in the book's title for more 
+				information about that book. </Typography><br/>
+				
+				<Typography variant='h6' style={{textAlign: "center"}}>React Workshop - Afonso Domingues</Typography><br/>
+				<br/><Divider/>
+			</Box>
+			<br/>
+			<Typography variant='h4' style={{textAlign: "center"}}>List of available books: </Typography>
+			<br/>
+			<Grid container>
+					{data.map((livro) => {
+						return (
+							<Grid item xs={3}>
+								<Book info={livro}/>
+							</Grid>
+						)
+					})}
+				
 			</Grid>
-			<Grid item xs={6}>
-				<Button onClick={handleClick} variant="contained">Increment</Button>
-			</Grid>
-			<Grid item xs={6}>
-				<h1>Counter</h1>
-			</Grid>
-			<Grid item xs={6}>
-				<h1>Counter2</h1>
-			</Grid>
-		</Grid>
-		<ul>
-			{data.map((livro) => {
-				return <Book info={livro} />
-			})}
-		</ul>
-	</div>
+		</div>
 	)
 }
